@@ -33,21 +33,21 @@ function Home() {
         leftBtnText="Custom order"
         rightBtnText="Existing Inventory"
       />
-         <Section
+      <Section
         title="Lowest Cost Olar Panels in America"
         description="Money-back guarantee"
         backgroundImg="solar-panel.jpg"
         leftBtnText="Order now"
         rightBtnText="Learn more"
       />
-         <Section
+      <Section
         title="Solar for New Roofs"
         description="Solar Roof Costs Less Than a new roofs "
         backgroundImg="solar-roof.jpg"
         leftBtnText="Order now"
         rightBtnText="Learn more"
       />
-           <Section
+      <Section
         title="Accessories"
         description=""
         backgroundImg="accessories.jpg"

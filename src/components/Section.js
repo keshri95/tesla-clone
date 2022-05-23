@@ -1,28 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade';
 
 function Section(props) {
-
   return (
     <Wrap bgImage={props.backgroundImg}>
+    <Fade bottom>
       <ItemText>
         <h1>{props.title}</h1>
         <p>{props.description}</p>
       </ItemText>
-    <Buttons>
-      <ButtonGroup>
-        <LeftButton>{props.leftBtnText}</LeftButton>
-
-
-        {props.rightBtnText && 
-          <RightButton>
-            {/* {props.rightBtnText} */}
-          </RightButton>
-        }
-        <RightButton>{props.rightBtnText}</RightButton>
-      </ButtonGroup>
-      <DownArrow src="/images/down-arrow.svg" />
-    </Buttons>
+    </Fade>
+      <Buttons>
+        <Fade bottom>
+        <ButtonGroup>
+          <LeftButton>{props.leftBtnText}</LeftButton>
+          {props.rightBtnText && (
+            <RightButton>{/* {props.rightBtnText} */}</RightButton>
+          )}
+          <RightButton>{props.rightBtnText}</RightButton>
+        </ButtonGroup>
+        <DownArrow src="/images/down-arrow.svg" />
+        </Fade>
+      </Buttons>
     </Wrap>
   );
 }
@@ -41,7 +41,7 @@ const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-image: ${props => `url("/images/${props.bgImage}")` }
+  background-image: ${(props) => `url("/images/${props.bgImage}")`};
 `;
 
 const ItemText = styled.div`
@@ -53,8 +53,7 @@ const ButtonGroup = styled.div`
   display: flex;
   margin-bottom: 30px;
 
-
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -85,9 +84,6 @@ const DownArrow = styled.div`
   // margin-top: 20px;
   height: 40px;
   amimation: animationDown infinite 1.5s;
+`;
 
-`
-
-const Buttons = styled.div`
-  
-`
+const Buttons = styled.div``;
