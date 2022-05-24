@@ -16,9 +16,10 @@ function Section(props) {
         <ButtonGroup>
           <LeftButton>{props.leftBtnText}</LeftButton>
           {props.rightBtnText && (
-            <RightButton>{/* {props.rightBtnText} */}</RightButton>
+            <RightButton>
+              {props.rightBtnText}
+              </RightButton>
           )}
-          <RightButton>{props.rightBtnText}</RightButton>
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" />
         </Fade>
