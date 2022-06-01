@@ -28,7 +28,7 @@ function Header() {
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="#">Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav show={burgerStatus}>
@@ -78,18 +78,27 @@ const Container = styled.div`
   right: 0;
   justify-content: space-betweeen;
   z-index: 1;
+  margin-top: 20px;
 `;
 const Menu = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
-  justify-content: center;
-
+  justify-content: center;  
+  gap: 10px;
   a{
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
-    padding: 0 10px
     flex-wrap: nowrap;
+    margin:5px 0;
+    color: black;
+  }
+
+  a:hover{
+    padding:5px 0;
+    border-radius: 5px;
+    background: grey;
+
   }
 `;
 
@@ -97,9 +106,16 @@ const RightMenu = styled.div`
   display: flex;
   align-items: center;
   a {
-    font-weight: 600;
     text-transform: uppercase;
     margin-right: 10px;
+    color: black;
+    font-weight: 400;
+  }
+
+  a:hover{
+    background: grey;
+    border-radius: 5px;
+    padding: 5px 0;
   }
 
   @media (max-width: 768px) {
