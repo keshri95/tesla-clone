@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+// import MenuIcon from '@mui/icons-material/Menu';
+// import CloseIcon from '@mui/icons-material/Close';
+import {AiOutlineMenu} from "react-icons/ai";
+import {AiOutlineClose} from "react-icons/ai";
 import { selectCars } from "../features/car/carSlice";
 import { useSelector } from "react-redux";
 
@@ -123,7 +125,7 @@ const RightMenu = styled.div`
   }
 `;
 
-const CustomMenu = styled(MenuIcon)`
+const CustomMenu = styled(AiOutlineMenu)`
   cursor: pointer;
 `;
 
@@ -152,7 +154,7 @@ const BurgerNav = styled.div`
   }
 `;
 
-const CustomClose = styled(CloseIcon)`
+const CustomClose = styled(AiOutlineClose)`
   cursor: pointer;
 `;
 const CloseWrapper = styled.div`
