@@ -33,7 +33,7 @@ function Header() {
         <a href="#">Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
-      <BurgerNav show={burgerStatus}>
+      <BurgerNav $show={burgerStatus}>
         <CloseWrapper onClick={() => setBurgerStatus(false)}>
           <CustomClose />
         </CloseWrapper>
@@ -142,7 +142,7 @@ const BurgerNav = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
-  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transform: ${(props) => (props.$show ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.2s;
   li {
     padding: 15px 0;
