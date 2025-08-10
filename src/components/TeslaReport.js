@@ -1,9 +1,10 @@
+import { Link } from "react-router";
 import styled from "styled-components";
 
 function TeslaReport() {
   return (
     <Report>
-      <a href="#">Read Tesla's 2021 Impact Report</a>
+      <Link to={`#`}>Read Tesla's 2021 Impact Report</Link>
     </Report>
   );
 }
@@ -12,7 +13,7 @@ export default TeslaReport;
 
 const Report = styled.div`
   // background: 0 1px #d0d1d2;
-  border: 1px solid red;
+  // border: 1px solid red;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,6 +26,6 @@ const Report = styled.div`
     // cursor: pointer;
     text-decoration: underline;
     color: grey;
-    border: 1px solid black;
+    // border: 1px solid black;
   }
 `;

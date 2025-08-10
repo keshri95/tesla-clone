@@ -1,31 +1,32 @@
+import { Link } from "react-router";
 import styled from "styled-components";
 
 function Footer() {
   return (
     <Container>
       <li>
-        <a href="#">Tesla &copy; 2022</a>
+        <Link to={`#`}>Tesla &copy; 2022</Link>
       </li>
       <li>
-        <a href="#">Privacy & Legal</a>
+        <Link to={`#`}>Privacy & Legal</Link>
       </li>
       <li>
-        <a href="#">Vehicle Recalls</a>
+        <Link to={`#`}>Vehicle Recalls</Link>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <Link to={`#`}>Contact</Link>
       </li>
       <li>
-        <a href="#">Careers</a>
+        <Link to={`#`}>Careers</Link>
       </li>
       <li>
-        <a href="#">News</a>
+        <Link to={`#`}>News</Link>
       </li>
       <li>
-        <a href="#">Engage</a>
+        <Link to={`#`}>Engage</Link>
       </li>
       <li>
-        <a href="#">Locations</a>
+        <Link to={`#`}>Locations</Link>
       </li>
     </Container>
   );

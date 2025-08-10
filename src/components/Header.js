@@ -6,6 +6,7 @@ import {AiOutlineMenu} from "react-icons/ai";
 import {AiOutlineClose} from "react-icons/ai";
 import { selectCars } from "../features/car/carSlice";
 import { useSelector } from "react-redux";
+import { Link } from "react-router";
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
@@ -15,13 +16,13 @@ function Header() {
 
   return (
     <Container>
-      <a>
+      <Link>
         <img src="/images/logo.svg" alt="tesla"></img>
-      </a>
+      </Link>
       <Menu>
 
         {cars && cars.map((car, index) => (
-            <a key={index} href="#">{car}</a>
+            <Link key={index} href="#">{car}</Link>
           ))}
         {/* <a href="#">Model S </a>
         <a href="#">Model 3 </a>
@@ -29,8 +30,8 @@ function Header() {
         <a href="#">Model Y </a> */}
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Account</a>
+        <Link>Shop</Link>
+        <Link>Account</Link>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav $show={burgerStatus}>
@@ -39,28 +40,28 @@ function Header() {
         </CloseWrapper>
 
         {cars && cars.map((car, index) => (
-          <li key={index}><a href="#">{car}</a> </li>
+          <li key={index}><Link>{car}</Link> </li>
         ))}
         <li>
-          <a href="#">Existing Inventory</a>
+          <Link>Existing Inventory</Link>
         </li>
         <li>
-          <a href="#">Used Inventory</a>
+          <Link>Used Inventory</Link>
         </li>
         <li>
-          <a href="#">Trade-in</a>
+          <Link href="#">Trade-in</Link>
         </li>
         <li>
-          <a href="#">Cyburtruck</a>
+          <Link href="#">Cyburtruck</Link>
         </li>
         <li>
-          <a href="#">Roadstrar</a>
+          <Link href="#">Roadstrar</Link>
         </li>
         <li>
-          <a href="#">Existing Inventory</a>
+          <Link href="#">Existing Inventory</Link>
         </li>
         <li>
-          <a href="#">Existing Inventory</a>
+          <Link href="#">Existing Inventory</Link>
         </li>
       </BurgerNav>
     </Container>

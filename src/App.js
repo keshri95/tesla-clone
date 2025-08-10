@@ -5,12 +5,14 @@ import TeslaReport from "./components/TeslaReport";
 import Footer from "./components/Footer";
 function App() {
   return (
-    <div className="App">
-      <TeslaReport />
-      <Header />
-      <Home />
-      <Footer />
-    </div>
+    <React.Fragment>
+      <div className="App">
+          <TeslaReport />
+          <Header />
+          <Home />
+          <Footer />
+      </div>
+    </React.Fragment>
   );
 }
 
